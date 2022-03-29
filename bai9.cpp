@@ -6,6 +6,7 @@
 #include <set>
 using namespace std;
 
+
 set<string> se;
 int n;
 void dq(string s) {
@@ -25,7 +26,7 @@ int main() {
     cin >> n;
     dq("");
     for(string s : se) {
-        if(s.length() == n) cout << s << endl;
+        cout << s << endl;
     }
 
     return 0;
