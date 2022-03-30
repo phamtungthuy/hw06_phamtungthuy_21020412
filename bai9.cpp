@@ -15,8 +15,8 @@ void dq(string s) {
     dq("(" + s + ")");
     for(string x : se) {
         if(x == "") continue;
-        dq(x + s);
-        dq(s + x);
+        if(se.find(x + s) == se.end())dq(x + s);
+        if(se.find(s + x) == se.end())dq(s + x);
     }
 
 }
