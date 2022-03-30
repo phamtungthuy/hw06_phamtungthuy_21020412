@@ -7,9 +7,7 @@ using namespace std;
 
 int dem(string s) {
     if(s == "") return 0;
-    char c = s[s.length() - 1];
-    if(c == '1') return 1 + dem(s.substr(0, s.length()-1));
-    return dem(s.substr(0, s.length()-1));
+    return s[s.length() - 1] - '0' + dem(s.substr(0, s.length()-1)) ;
 }
 
 int main() {
